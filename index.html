@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Le Gourmet - Restaurant</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+        :root {
+            --primary: #8b2e1e;
+            --secondary: #f4c95d;
+            --dark: #222;
+            --light: #fffaf3;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        .navbar {
+            background-color: var(--dark);
+        }
+
+        .navbar-brand {
+            color: var(--secondary) !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary) !important;
+        }
+
+        .hero {
+            min-height: 90vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+                url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80")
+                center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: bold;
+        }
+
+        .btn-custom {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+        }
+
+        .btn-custom:hover {
+            background-color: #682116;
+            color: white;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .menu-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: .3s;
+            height: 100%;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,.15);
+        }
+
+        .menu-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .price {
+            color: var(--primary);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        #about img {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .contact-section {
+            background-color: #f1e5d5;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 8px;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-cup-hot"></i> Le Gourmet
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarRestaurant"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarRestaurant">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">À propos de nous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero">
+    <div class="container">
+        <h1>Le goût de l'excellence</h1>
+
+        <p class="lead mb-4">
+            Une cuisine raffinée préparée avec passion et produits frais.
+        </p>
+
+        <a href="#menu" class="btn btn-custom btn-lg">
+            Découvrir notre menu
+        </a>
+    </div>
+</header>
+
+<!-- MENU -->
+<section id="menu">
+    <div class="container">
+
+        <h2 class="text-center section-title">
+            Notre Menu
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Plat 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card menu-card shadow-sm">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        alt="Salade fraîche"
+                    >
+
+                    <div class="card-body">
+                        <h3 class="card-title">Salade Méditerranéenne</h3>
+
+                        <p class="card-text">
+                            Tomates fraîches, feta, olives, concombre et
+                            vinaigrette maison.
+                        </p>
+
+                        <p class="price">8 500 FCFA</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Plat 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card menu-card shadow-sm">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        alt="Steak grillé"
+                    >
+
+                    <div class="card-body">
+                        <h3 class="card-title">Filet de Bœuf Grillé</h3>
+
+                        <p class="card-text">
+                            Filet de bœuf tendre accompagné de légumes
+                            de saison et de pommes de terre.
+                        </p>
+
+                        <p class="price">15 000 FCFA</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Plat 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card menu-card shadow-sm">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        alt="Pâtes italiennes"
+                    >
+
+                    <div class="card-body">
+                        <h3 class="card-title">Pâtes aux Herbes</h3>
+
+                        <p class="card-text">
+                            Pâtes fraîches, herbes aromatiques, parmesan
+                            et sauce crémeuse.
+                        </p>
+
+                        <p class="price">10 000 FCFA</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-white">
+
+    <div class="container">
+
+        <h2 class="text-center section-title">
+            À propos de nous
+        </h2>
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-12 col-md-6">
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
+                    alt="Restaurant Le Gourmet"
+                >
+            </div>
+
+            <div class="col-12 col-md-6">
+
+                <h3>Une passion pour la gastronomie</h3>
+
+                <p>
+                    Bienvenue chez Le Gourmet, un restaurant qui associe
+                    tradition et créativité. Notre équipe sélectionne
+                    soigneusement des produits frais afin de proposer
+                    une expérience culinaire unique.
+                </p>
+
+                <p>
+                    Notre objectif est simple : vous offrir des plats
+                    savoureux dans une ambiance chaleureuse et conviviale.
+                </p>
+
+                <span class="badge bg-danger">
+                    Cuisine faite maison
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+
+    <div class="container">
+
+        <h2 class="text-center section-title">
+            Contactez-nous
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <form>
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            Nom
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            placeholder="Votre nom"
+                            required
+                        >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="nom@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">
+                            Message
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="message"
+                            rows="5"
+                            placeholder="Votre message..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-custom">
+                        Envoyer
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container text-center">
+
+        <p class="mb-3">
+            &copy; 2026 Le Gourmet. Tous droits réservés.
+        </p>
+
+        <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+        </div>
+
+    </div>
+
+</footer>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
